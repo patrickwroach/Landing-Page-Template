@@ -1,16 +1,9 @@
 //Color Library
 $color-light: #fff;
-$color-transparent-light-30: rgba(255, 255, 255, 0.3);
 $color-dark: #171717;
-$color-transparent-dark-30: rgba(100, 100, 100, 0.3);
 $color-mid: #13298a;
 $color-highlight: #1837c2;
-$color-transparent-highlight-10: rgba(24, 55, 194, 0.1);
-$color-transparent-highlight-20: rgba(24, 55, 194, 0.2);
-$color-transparent-highlight-30: rgba(24, 55, 194, 0.3);
-$color-transparent-highlight-40: rgba(24, 55, 194, 0.4);
-$color-transparent-highlight-50: rgba(24, 55, 194, 0.5);
-$color-transparent-highlight-60: rgba(24, 55, 194, 0.6);
+
 //Standard Spacing Library
 $content-width: 80vw;
 //Spot clenaing resets
@@ -23,8 +16,9 @@ h5,
 p {
   margin: 0;
 }
-a{
-  text-decoration:none;
+
+a {
+  text-decoration: none;
 }
 //Fonts 
 
@@ -105,41 +99,40 @@ body {
       margin: 0;
       padding: 0;
       white-space: normal;
-      display:table;
-     
+      display: table;
+
       .grid {
         width: 100%;
         margin: 25px 0;
 
-        .box{
-              box-sizing: border-box;
-              padding: 2vw;
-              display: inline-block;
-              border-bottom: 1.5px solid $color-dark;
-               border-right: 1.5px solid $color-dark;
-              p {
-                margin: 10px;
-              }
+        .box {
+          box-sizing: border-box;
+          padding: 2vw;
+          display: inline-block;
+          border-bottom: 1.5px solid $color-dark;
+          border-right: 1.5px solid $color-dark;
 
-            .button-container {
-              width: 100%;
-              margin: 10px 0;
-              display: inline-block;
+          p {
+            margin: 10px;
+          }
 
-            }
+          .button-container {
+            width: 100%;
+            margin: 10px 0;
+            display: inline-block;
 
-            //to do figure out mixin to target only bottom row
-             &:nth-last-of-type(-n+3) {
-              border-bottom: none;
-            }
+          }
 
-        
+          //to do: set up mixin to target only bottom row
+          &:nth-last-of-type(-n+3) {
+            border-bottom: none;
+          }
 
-            &:nth-of-type(3n) {
-              //todo:fix white space biz
-              margin: -4px;
-              border-right:none;
-            }
+          &:nth-of-type(3n) {
+            //todo:fix white space biz
+            margin: -4px;
+            border-right: none;
+          }
         }
 
         &.two-col {
@@ -177,22 +170,23 @@ body {
 
           }
         }
+
         &.three-col {
           .box {
-         
+
             width: 25vw;
-              &:nth-last-of-type(-n+3) {
+
+            &:nth-last-of-type(-n+3) {
               border-bottom: none;
             }
-                     
-
-           
 
           }
         }
       }
-      .image-container, .copy-container{ 
-        display:table-cell;
+
+      .copy-container,
+      .image-container {
+        display: table-cell;
         vertical-align: middle;
       }
     }
@@ -211,54 +205,58 @@ body {
   margin: 10px;
   text-decoration: none;
 }
-#team{
-  padding:50px 0;
-  .content{
-    .section{
-       text-align:center;
-    #leader{
-     width:100%;
-     display:table;
-     padding:50px 0;
 
-    .image-container, .copy-container{
-     
-      display:table-cell;
-      vertical-align:middle;
-    }
-      .image-container{
-      
-        padding-right:2%;        
-        width:45%;
-        position:relative;
-        text-align:right;
-        
+#team {
+  padding: 50px 0;
 
-         .head-shot{
-           display:inline-block;
-            height:10vw;
-        width:10vw;
-        border-radius:5vw;
-          // clip-path: circle(5vw at center);
-          background:url("https://spot.nwie.net/site/Infrastructure%20and%20Operations%20-%20Operations/Pictures/_w/Ken%20Hagy_jpg.jpg");
-          background-position:center top;
-          background-repeat:no-repeat;
-          background-size:80% auto;
-         }
-               
-        
-      }
-      .copy-container{
-        p{
-          margin: 15px 0;
+  .content {
+    .section {
+      text-align: center;
+
+      #leader {
+        width: 100%;
+        display: table;
+        padding: 50px 0;
+
+        .copy-container,
+        .image-container {
+
+          display: table-cell;
+          vertical-align: middle;
         }
-        text-align:left;
-        padding-left:2%;
+
+        .image-container {
+
+          padding-right: 2%;
+          width: 45%;
+          position: relative;
+          text-align: right;
+
+          .head-shot {
+            display: inline-block;
+            height: 10vw;
+            width: 10vw;
+            border-radius: 5vw;
+            // background-image:;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 80% auto;
+          }
+
+        }
+
+        .copy-container {
+          p {
+            margin: 15px 0;
+          }
+          text-align: left;
+          padding-left: 2%;
+        }
       }
-    }
     }
   }
 }
+
 #spot-link {
 
   text-align: center;
@@ -287,7 +285,7 @@ body {
 }
 
 // Material io elements 
-@import "../node_modules/@material/button/mdc-button";
+@import "..\node_modules\@material\button\mdc-button.scss";
 
 .mdc-button {
   @include mdc-button-ink-color($color-light);
@@ -310,7 +308,7 @@ body {
   .content-container {
     height: 100vh;
     position: relative;
-    background: $color-transparent-highlight-10;
+    background: rgba($color-highlight, .1);
 
     .content {
       .section {
@@ -321,7 +319,7 @@ body {
         h1 {
           color: $color-light;
           font-size: 6.5vmin;
-          text-shadow: 0 0 .2em $color-transparent-dark-30;
+          text-shadow: 0 0 .2em rgba ($color-dark, .3);
         }
       }
     }
@@ -374,7 +372,7 @@ body {
               vertical-align: middle;
               margin: 0 auto;
               font-size: 3vmin;
-              text-shadow: 0 0 .2em $color-transparent-dark-30;
+              text-shadow: 0 0 .2em rgba($color-dark, .3);
               font-style: italic;
               width: 60%;
               color: $color-light;
@@ -521,12 +519,10 @@ $arrow-line-width: .2vw;
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   a {
     #spot-link {
-
-      span{
+      span {
         position: relative;
         bottom: .3rem;
       }
-     
 
     }
   }
@@ -587,7 +583,7 @@ $arrow-line-width: .2vw;
     .content-container {
       height: 75vh;
       min-height: 375px;
-      background: $color-transparent-highlight-40;
+      background: rgba($color-highlight, .4);
 
       .content {
         height: 25vh;
@@ -618,7 +614,7 @@ $arrow-line-width: .2vw;
           height: 50vh;
           min-height: 200px;
 
-          background: $color-transparent-dark-30;
+          background: rgba($color-dark, .3);
 
           .content {
             display: table;
@@ -684,13 +680,14 @@ $arrow-line-width: .2vw;
               }
             }
           }
-          &.three-col{
-            .box{
-           
-              width:100%;
+
+          &.three-col {
+            .box {
+
+              width: 100%;
               border-bottom: 1.5 px solid $color-dark;
-              border-right:none;
-           
+              border-right: none;
+
             }
           }
         }
@@ -714,38 +711,43 @@ $arrow-line-width: .2vw;
       }
     }
   }
-  #team{
-    .content{
-    .section{
-      #leader{
-        text-align:left;
-        .copy-container,.image-container{
-         
-          
-          text-align:left;
-          padding:5px;
+
+  #team {
+    .content {
+      .section {
+        #leader {
+          text-align: left;
+
+          .copy-container,
+          .image-container {
+
+            text-align: left;
+            padding: 5px;
+
+          }
+
+          .image-container {
+            width: 50%;
+            padding-left: 0;
+
+            .head-shot {
+              width: 95%;
+              padding-top: 95%;
+              height: 0;
+              border-radius: 50%;
+            }
+          }
 
         }
-        .image-container{
-          width:50%;
-          padding-left:0;
-          .head-shot{
-            width:95%;
-            padding-top:95%;
-            height:0;
-            border-radius:50%;
+
+        .grid {
+          &.three-col {
+            .box {
+              text-align: left;
+            }
           }
         }
-
       }
-      .grid{
-        &.three-col{
-        .box{
-          text-align:left;
-        }
-        }
-      }
-    }
     }
   }
 }

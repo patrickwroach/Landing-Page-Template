@@ -60,50 +60,38 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a527f5bb5085aae46c331ca351d55112.jpg";
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "752fe63ffbb358fc924329596598eb98.jpg";
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
-__webpack_require__(3);
+__webpack_require__(1);
 
-__webpack_require__(4);
+__webpack_require__(2);
 
-var _background = __webpack_require__(0);
+var _background = __webpack_require__(3);
 
 var _background2 = _interopRequireDefault(_background);
 
-var _backgroundHighlight = __webpack_require__(1);
+var _backgroundHighlight = __webpack_require__(4);
 
 var _backgroundHighlight2 = _interopRequireDefault(_backgroundHighlight);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 1 */
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "bundle.css";
+throw new Error("Module build failed: \r\n@import \"..\\node_modules\\@material\\button\\mdc-button.scss\";\r\n^\r\n      File to import not found or unreadable: ..node_modules@material\u000buttonmdc-button.scss.\r\n      in C:\\Users\\roachp3\\Desktop\\PS\\Landing page template\\Landing-Page-Template\\Dev\\src\\styles.scss (line 288, column 1)");
 
 /***/ }),
-/* 4 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -181,6 +169,18 @@ module.exports = __webpack_require__.p + "bundle.css";
         return window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
     };
 })(window);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a527f5bb5085aae46c331ca351d55112.jpg";
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "752fe63ffbb358fc924329596598eb98.jpg";
 
 /***/ })
 /******/ ]);
